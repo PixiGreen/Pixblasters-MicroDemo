@@ -1,0 +1,58 @@
+
+CONFIG VCCAUX = 3.3;
+
+###############################################################################
+#
+# Timing constraints
+#
+###############################################################################
+
+NET "*/dvi_rx0/rxclk" TNM_NET = "rx_dvi_clk";
+TIMESPEC "TS_rx_dvi_clk" = PERIOD "rx_dvi_clk" 80 MHz HIGH 50%;
+
+NET "osc_24mhz" TNM_NET = "mclk";
+TIMESPEC "TS_mclk" = PERIOD "mclk" 24 MHz HIGH 50%;
+
+###############################################################################
+#
+# Pinout constraints
+#
+###############################################################################
+
+## DVI input - HDMI - to be used in MASTER boards
+
+NET "hdmi_present" LOC = "P34" | IOSTANDARD = LVCMOS33; 
+
+NET "tmds_in<3>"  LOC = "P24" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmdsb_in<3>" LOC = "P23" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmds_in<2>"  LOC = "P33" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmdsb_in<2>" LOC = "P32" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmds_in<1>"  LOC = "P30" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmdsb_in<1>" LOC = "P29" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmds_in<0>"  LOC = "P27" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+NET "tmdsb_in<0>" LOC = "P26" | IOSTANDARD = TMDS_33; # Bank x, 3V3 bank
+
+## Quartz clock input
+
+NET "osc_24mhz"    LOC = "P22" | IOSTANDARD = LVCMOS33;
+
+## Outputs (Outs 0 - 15)
+
+NET "led_out<0>"     LOC = "P132"   | IOSTANDARD = LVCMOS33;
+NET "led_out<1>"     LOC = "P131"   | IOSTANDARD = LVCMOS33;
+NET "led_out<2>"     LOC = "P127"   | IOSTANDARD = LVCMOS33;
+NET "led_out<3>"     LOC = "P126"   | IOSTANDARD = LVCMOS33;
+NET "led_out<4>"     LOC = "P124"   | IOSTANDARD = LVCMOS33;
+NET "led_out<5>"     LOC = "P123"   | IOSTANDARD = LVCMOS33;
+NET "led_out<6>"     LOC = "P121"   | IOSTANDARD = LVCMOS33;
+NET "led_out<7>"     LOC = "P120"   | IOSTANDARD = LVCMOS33;
+NET "led_out<8>"     LOC = "P119"   | IOSTANDARD = LVCMOS33;
+NET "led_out<9>"     LOC = "P118"   | IOSTANDARD = LVCMOS33;
+NET "led_out<10>"    LOC = "P116"   | IOSTANDARD = LVCMOS33;
+NET "led_out<11>"    LOC = "P114"   | IOSTANDARD = LVCMOS33;
+NET "led_out<12>"    LOC = "P117"   | IOSTANDARD = LVCMOS33;
+NET "led_out<13>"    LOC = "P115"   | IOSTANDARD = LVCMOS33;
+NET "led_out<14>"    LOC = "P112"   | IOSTANDARD = LVCMOS33;
+NET "led_out<15>"    LOC = "P111"   | IOSTANDARD = LVCMOS33;
+
+

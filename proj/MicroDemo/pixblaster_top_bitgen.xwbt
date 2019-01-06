@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Pixblasters-MicroDemo\proj\MicroDemo\pixblaster_top.ncd
+OUTFILE=C:\Pixblasters-MicroDemo\proj\MicroDemo\pixblaster_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=C:\Pixblasters-MicroDemo\proj\MicroDemo
+LICENSE=ISE
+USER_INFO=1610270_205625557_210583434_003
