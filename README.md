@@ -42,6 +42,7 @@ IP core, instantiates the DVI video input receiver and the necessary clocking in
 The design is fully compatible with the Pixblasters MS1 Video LED Strip Controller board. It can be also
 adapted for use with third-party Xilinx FPGA based boards. The supported Pixblasters_Light Demo features:  
 
+  - Different input video resolutions (max. 720p - 1280x720@60)
   - 16 LED strips controller - 8192 RGB WS2812 LEDs
   - max. 512 LEDs per line
   - supports 60 fps vertical refresh
